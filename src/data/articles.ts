@@ -38,7 +38,7 @@ export const articles: Article[] = [
     author: 'Claudette Forbes',
     publishedAt: '2026-06-01',
     readingTime: 4,
-    image: 'food',
+    image: 'images/articles/crab-season.jpg',
     featured: true,
   },
   {
@@ -51,7 +51,7 @@ export const articles: Article[] = [
     author: 'Reggie Livingston',
     publishedAt: '2026-05-29',
     readingTime: 3,
-    image: 'sports',
+    image: 'images/segments/softball.jpg',
     featured: false,
   },
   {
@@ -64,7 +64,7 @@ export const articles: Article[] = [
     author: 'Ana Maria Watson',
     publishedAt: '2026-05-27',
     readingTime: 7,
-    image: 'environment',
+    image: 'images/articles/coral-reef.jpg',
     featured: true,
   },
   {
@@ -77,7 +77,7 @@ export const articles: Article[] = [
     author: 'Pastor Jerome Williams',
     publishedAt: '2026-05-24',
     readingTime: 4,
-    image: 'religion',
+    image: 'images/articles/choir.jpeg',
     featured: false,
   },
   {
@@ -90,7 +90,7 @@ export const articles: Article[] = [
     author: 'Carlton Newball',
     publishedAt: '2026-05-22',
     readingTime: 5,
-    image: 'agriculture',
+    image: 'images/segments/banana-gathering.webp',
     featured: false,
   },
   {
