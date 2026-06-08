@@ -11,7 +11,7 @@ export const articles: Article[] = [
     author: 'Marvella Robinson',
     publishedAt: '2026-06-05',
     readingTime: 6,
-    image: '/images/features/
+    image: '/images/features/talks.jpg',
     featured: true,
     body: `The morning begins, as it always has, with voices. On the narrow streets of Old Providence, grandmothers call their grandchildren to breakfast in a language that has no perfect translation — a language that carries the history of the archipelago in every syllable.\n\nCreole — the language of the Raizal people — is not simply a dialect. It is a full, complex tongue rooted in the encounter between West African languages, English, and the unique island experience of San Andrés, Providencia, and Santa Catalina. For the Raizal community, it is the language of home, of faith, of love, and of memory.\n\n"When my grandmother told me a story in Creole, she was giving me the whole island," says community elder Dorothy Howard. "Every word holds something that cannot be said another way."\n\nToday, younger generations are finding new ways to keep the language alive — through music, social media, and community schools dedicated to teaching Creole alongside Spanish and English. Artists are writing songs entirely in Creole. Teachers are developing the first structured curriculum in the language's history.\n\nTODO: Link to archive of recorded Creole oral histories`,
   },
