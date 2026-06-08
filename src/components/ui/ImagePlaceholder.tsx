@@ -7,11 +7,11 @@ interface ImagePlaceholderProps {
   aspect?: string;
 }
 
-export function ImagePlaceholder({ label, gradient = 'from-navy-700 to-turquoise-700', className, aspect = 'aspect-video' }: ImagePlaceholderProps) {
+export function ImagePlaceholder({ label, gradient = 'from-travel-700 to-travel-900', className, aspect = 'aspect-video' }: ImagePlaceholderProps) {
   return (
     <div className={cn(`bg-gradient-to-br ${gradient} flex items-end justify-start p-3`, aspect, className)}>
       {label && (
-        <span className="text-white/60 text-xs font-medium uppercase tracking-wider">{label}</span>
+        <span className="text-white/50 text-xs font-medium uppercase tracking-wider">{label}</span>
       )}
     </div>
   );

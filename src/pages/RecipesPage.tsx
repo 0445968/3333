@@ -18,32 +18,32 @@ export function RecipesPage() {
   const featured = recipes.find((r) => r.featured);
 
   return (
-    <div className="bg-white">
+    <div className="app-page">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-palm-800 to-sand-800 py-12 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <ChefHat size={32} className="text-cream-300 mb-3" />
+      <div className="bg-travel-800 py-12 text-white">
+        <div className="content-shell">
+          <ChefHat size={32} className="text-sun-300 mb-3" />
           <h1 className="font-display text-4xl font-bold mb-2">{t.recipes.heroTitle}</h1>
           <p className="text-white/70 max-w-xl">{t.recipes.heroSub}</p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="content-shell py-8">
         {/* Featured */}
         {featured && (
-          <div className="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-sand-50 rounded-2xl p-6">
-            <div className="bg-gradient-to-br from-palm-700 to-sand-600 rounded-xl aspect-[4/3] flex items-end p-4">
+          <div className="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+            <div className="bg-gradient-to-br from-travel-700 to-travel-900 rounded-2xl aspect-[4/3] flex items-end p-4">
               <span className="text-white/50 text-xs uppercase tracking-wider">Featured Recipe</span>
             </div>
             <div>
-              <span className="text-sand-600 text-xs font-bold uppercase tracking-wider">Featured Recipe</span>
-              <h2 className="font-display text-2xl font-bold text-navy-900 mt-1">{featured.title}</h2>
-              <p className="text-navy-600 mt-2">{featured.description}</p>
-              <div className="flex gap-4 mt-3 text-sm text-navy-500">
+              <span className="section-label">Featured Recipe</span>
+              <h2 className="font-display text-2xl font-bold text-ink-900 mt-1">{featured.title}</h2>
+              <p className="text-ink-600 mt-2">{featured.description}</p>
+              <div className="flex gap-4 mt-3 text-sm text-ink-500">
                 <span>{t.recipes.prepTime}: {featured.prepTime}</span>
                 <span>{t.recipes.difficulty}: {featured.difficulty}</span>
               </div>
-              <p className="mt-3 text-sand-700 italic text-sm border-l-2 border-sand-300 pl-2">{featured.culturalNote}</p>
+              <p className="mt-3 text-travel-700 italic text-sm border-l-2 border-travel-300 pl-2">{featured.culturalNote}</p>
               <Button variant="primary" size="md" className="mt-4">{t.readMore}</Button>
             </div>
           </div>
@@ -55,10 +55,10 @@ export function RecipesPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
                 activeCategory === cat
-                  ? 'bg-navy-900 text-white'
-                  : 'bg-sand-100 text-navy-700 hover:bg-sand-200'
+                  ? 'bg-travel-700 text-white'
+                  : 'bg-surface-subtle text-ink-700 border border-surface-border hover:bg-travel-50 hover:text-travel-800'
               }`}
             >
               {cat}
@@ -74,11 +74,11 @@ export function RecipesPage() {
         </div>
 
         {/* Submit callout */}
-        <div className="bg-palm-50 rounded-2xl p-6 border border-palm-200 flex items-start gap-4">
-          <Upload size={24} className="text-palm-600 shrink-0 mt-1" />
+        <div className="modern-card p-6 flex items-start gap-4">
+          <Upload size={24} className="text-travel-600 shrink-0 mt-1" />
           <div>
-            <h3 className="font-display text-xl font-bold text-navy-900">{t.recipes.submitRecipe}</h3>
-            <p className="text-navy-600 mt-1">{t.recipes.submitRecipeSub}</p>
+            <h3 className="font-display text-xl font-bold text-ink-900">{t.recipes.submitRecipe}</h3>
+            <p className="text-ink-600 mt-1">{t.recipes.submitRecipeSub}</p>
             {/* TODO: Add user submissions workflow */}
             <Button variant="secondary" size="md" className="mt-3">Submit a Recipe</Button>
           </div>

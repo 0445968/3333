@@ -3,10 +3,8 @@ import { articles } from '../../data/articles';
 import { videoSegments } from '../../data/videos';
 import { ArticleCard } from '../cards/ArticleCard';
 import { VideoCard } from '../cards/VideoCard';
-import { useLanguage } from '../../i18n/LanguageContext';
 
 export function HeroSection() {
-  const { t } = useLanguage();
   const featured = articles.filter((a) => a.featured).slice(0, 3);
   const mainStory = featured[0];
   const sideStories = featured.slice(1, 3);
@@ -28,15 +26,15 @@ export function HeroSection() {
             <ArticleCard key={article.id} article={article} variant="compact" />
           ))}
           {featuredVideo && (
-            <Link to="/videos" className="block group bg-navy-900 rounded-xl overflow-hidden hover:opacity-95 transition-opacity">
+            <Link to="/videos" className="block group modern-card hover:shadow-card-md transition-shadow">
               <div className="flex items-center gap-3 p-3">
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-turquoise-700 to-navy-800 flex items-center justify-center shrink-0">
-                  <span className="text-white/70 text-xs">▶</span>
+                <div className="w-16 h-14 rounded-2xl bg-travel-800 flex items-center justify-center shrink-0">
+                  <span className="text-white text-lg">▶</span>
                 </div>
                 <div>
-                  <p className="text-turquoise-400 text-xs font-semibold uppercase tracking-wider">Watch Now</p>
-                  <p className="text-white font-semibold text-sm leading-snug">{featuredVideo.title}</p>
-                  <p className="text-white/50 text-xs mt-0.5">{featuredVideo.host} · {featuredVideo.duration}</p>
+                  <p className="section-label">Watch Now</p>
+                  <p className="text-ink-900 font-semibold text-sm leading-snug mt-0.5">{featuredVideo.title}</p>
+                  <p className="text-ink-500 text-xs mt-0.5">{featuredVideo.host} · {featuredVideo.duration}</p>
                 </div>
               </div>
             </Link>

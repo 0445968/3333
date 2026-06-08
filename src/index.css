@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,151 +7,129 @@
 @layer base {
   :root {
     font-family: 'Inter', system-ui, sans-serif;
-    color: #0B1220;
-    background: #F6F8FB;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: #F6F8FB;
   }
 
   body {
-    @apply min-h-screen bg-page-modern text-ink-900;
+    color: #1E293B;
+    background-color: #F6F8FB;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: 'Manrope', Inter, system-ui, sans-serif;
-    color: #0B1220;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
     letter-spacing: -0.012em;
-  }
-
-  h1 {
-    @apply leading-[1.04];
-  }
-
-  h2,
-  h3,
-  h4 {
-    @apply leading-tight;
-  }
-
-  p {
-    @apply leading-7 text-ink-700;
-  }
-
-  a {
-    @apply text-travel-700 underline-offset-4 hover:text-travel-800;
-  }
-
-  ::selection {
-    background: #FFD166;
     color: #0B1220;
   }
 }
 
 @layer components {
+  /* Page shell */
   .app-page {
-    @apply min-h-screen bg-page-modern text-ink-900;
+    @apply bg-surface-page min-h-screen;
   }
 
+  .content-shell {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Header */
   .site-header {
-    @apply sticky top-0 z-50 border-b border-surface-border bg-white/95 backdrop-blur-xl;
+    @apply bg-white border-b border-surface-border sticky top-0 z-40 shadow-sm;
   }
 
+  /* Nav */
   .site-nav {
     @apply bg-travel-800 text-white;
   }
 
-  .site-nav a,
-  .site-nav button {
-    @apply text-white hover:bg-white/10;
-  }
-
-  .hero-section {
-    @apply bg-hero-modern;
-  }
-
-  .content-shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
-  }
-
+  /* Cards */
   .modern-card {
-    @apply rounded-3xl border border-surface-border bg-white shadow-card;
+    @apply bg-white rounded-3xl border border-surface-border shadow-card overflow-hidden;
   }
 
   .modern-card-hover {
-    @apply rounded-3xl border border-surface-border bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-lift;
+    @apply modern-card hover:shadow-card-md transition-shadow duration-200;
   }
 
+  /* Panels */
   .modern-panel-blue {
-    @apply rounded-3xl bg-blue-panel text-white shadow-panel;
+    @apply bg-travel-800 text-white rounded-3xl;
   }
 
-  .modern-panel-blue p,
-  .modern-panel-blue span {
-    @apply text-white/90;
-  }
-
-  .modern-panel-red {
-    @apply rounded-2xl bg-breaking-panel text-white shadow-card;
-  }
-
-  .modern-panel-red p,
-  .modern-panel-red span {
-    @apply text-white/90;
+  .modern-panel-dark {
+    @apply bg-ink-900 text-white rounded-3xl;
   }
 
   .modern-panel-sun {
-    @apply rounded-2xl bg-sun-panel text-ink-900 shadow-card;
+    @apply bg-sun-300 text-ink-900 rounded-3xl;
   }
 
+  .modern-panel-aqua {
+    @apply bg-aqua-700 text-white rounded-3xl;
+  }
+
+  .modern-panel-subtle {
+    @apply bg-surface-subtle text-ink-800 rounded-3xl border border-surface-border;
+  }
+
+  /* Buttons */
   .primary-button {
-    @apply inline-flex items-center justify-center rounded-xl bg-travel-700 px-5 py-3 text-sm font-extrabold text-white shadow-card transition hover:bg-travel-800 hover:shadow-lift;
+    @apply inline-flex items-center gap-2 bg-travel-700 hover:bg-travel-800 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-travel-500 focus:ring-offset-2;
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center rounded-xl border border-surface-border bg-white px-5 py-3 text-sm font-extrabold text-ink-900 shadow-sm transition hover:border-travel-300 hover:bg-travel-50;
+    @apply inline-flex items-center gap-2 bg-white hover:bg-ink-50 text-ink-900 font-semibold px-5 py-2.5 rounded-xl border border-surface-border transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-travel-400 focus:ring-offset-2;
   }
 
   .sun-button {
-    @apply inline-flex items-center justify-center rounded-xl bg-sun-300 px-5 py-3 text-sm font-extrabold text-ink-900 shadow-card transition hover:bg-sun-400;
+    @apply inline-flex items-center gap-2 bg-sun-300 hover:bg-sun-400 text-ink-900 font-semibold px-5 py-2.5 rounded-xl transition-colors duration-150;
   }
 
+  .ghost-button {
+    @apply inline-flex items-center gap-2 text-travel-700 hover:text-travel-800 hover:bg-travel-50 font-medium px-4 py-2 rounded-xl transition-colors duration-150;
+  }
+
+  /* Category pills */
   .category-pill {
-    @apply inline-flex items-center gap-2 rounded-full border border-surface-border bg-white px-4 py-2 text-sm font-bold text-ink-800 shadow-sm transition hover:border-travel-300 hover:bg-travel-50 hover:text-travel-800;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-ink-800 text-xs font-semibold border border-surface-border hover:bg-travel-50 hover:text-travel-800 transition-colors cursor-pointer whitespace-nowrap;
   }
 
   .category-pill-active {
-    @apply inline-flex items-center gap-2 rounded-full bg-travel-700 px-4 py-2 text-sm font-bold text-white shadow-card;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-travel-700 text-white text-xs font-semibold whitespace-nowrap;
   }
 
+  /* Typography helpers */
   .section-label {
-    @apply text-xs font-black uppercase tracking-[0.18em] text-travel-700;
+    @apply text-xs font-bold uppercase tracking-widest text-travel-600;
   }
 
   .muted-text {
     @apply text-ink-600;
   }
 
+  /* Links */
   .safe-link {
-    @apply font-semibold text-travel-700 hover:text-travel-800;
+    @apply text-travel-700 hover:text-travel-800 hover:underline transition-colors;
   }
 
   .safe-dark-link {
-    @apply font-semibold text-white underline decoration-white/50 underline-offset-4 hover:text-white;
+    @apply text-white hover:text-sun-200 transition-colors;
+  }
+
+  /* Breaking news */
+  .breaking-bar {
+    @apply bg-coral-700 text-white;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Manrope', Inter, system-ui, sans-serif;
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
     letter-spacing: -0.012em;
   }
 
@@ -159,7 +137,25 @@
     text-wrap: balance;
   }
 
-  .text-pretty {
-    text-wrap: pretty;
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

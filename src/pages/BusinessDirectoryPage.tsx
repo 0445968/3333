@@ -24,10 +24,10 @@ export function BusinessDirectoryPage() {
   );
 
   return (
-    <div className="bg-white">
+    <div className="app-page">
       {/* Hero */}
-      <div className="bg-caribbean-gradient py-12 text-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="bg-travel-800 py-12 text-white">
+        <div className="content-shell">
           <h1 className="font-display text-4xl font-bold mb-2">{t.directory.heroTitle}</h1>
           <p className="text-white/60 max-w-xl mb-6">{t.directory.heroSub}</p>
           {/* Search */}
@@ -38,23 +38,23 @@ export function BusinessDirectoryPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={t.directory.searchPlaceholder}
-              className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:border-turquoise-400 text-sm"
+              className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:border-sun-300 text-sm"
             />
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="content-shell py-8">
         {/* Category filters */}
         <div className="flex flex-wrap gap-2 mb-6">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
                 activeCategory === cat
-                  ? 'bg-navy-900 text-white'
-                  : 'bg-sand-100 text-navy-700 hover:bg-sand-200'
+                  ? 'bg-travel-700 text-white'
+                  : 'bg-surface-subtle text-ink-700 border border-surface-border hover:bg-travel-50 hover:text-travel-800'
               }`}
             >
               {cat}
@@ -70,7 +70,7 @@ export function BusinessDirectoryPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 text-navy-400">
+          <div className="text-center py-16 text-ink-500">
             <p className="text-lg font-display">No businesses found</p>
             <p className="text-sm mt-1">Try a different category or search term.</p>
           </div>

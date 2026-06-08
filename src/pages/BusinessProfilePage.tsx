@@ -16,20 +16,20 @@ export function BusinessProfilePage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-display text-2xl text-navy-900 mb-2">{t.common.notFound}</h1>
-          <Link to="/directory" className="text-turquoise-600 hover:underline">Back to Directory</Link>
+          <h1 className="font-display text-2xl text-ink-900 mb-2">{t.common.notFound}</h1>
+          <Link to="/directory" className="safe-link">Back to Directory</Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-white">
+    <div className="app-page">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-navy-800 to-turquoise-800 py-14">
-        <div className="max-w-7xl mx-auto px-4 text-white">
+      <div className="bg-travel-800 py-14">
+        <div className="content-shell text-white">
           {business.featured && (
-            <span className="bg-sand-400 text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide mb-3 inline-block">
+            <span className="bg-sun-300 text-ink-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide mb-3 inline-block">
               Featured Business
             </span>
           )}
@@ -37,26 +37,26 @@ export function BusinessProfilePage() {
           <div className="flex items-center gap-4 text-white/60 text-sm mt-2">
             <span>{business.category}</span>
             <span className="flex items-center gap-1"><MapPin size={13} /> {business.island}</span>
-            <span className="flex items-center gap-1"><Star size={13} className="fill-sand-400 text-sand-400" /> {business.rating}</span>
+            <span className="flex items-center gap-1"><Star size={13} className="fill-sun-300 text-sun-300" /> {business.rating}</span>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="content-shell py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main */}
           <main className="lg:col-span-2 space-y-6">
             <div>
-              <h2 className="font-display text-xl font-bold text-navy-900 mb-2">About</h2>
-              <p className="text-navy-600 leading-relaxed">{business.description}</p>
+              <h2 className="font-display text-xl font-bold text-ink-900 mb-2">About</h2>
+              <p className="text-ink-600 leading-relaxed">{business.description}</p>
             </div>
 
             {business.services && (
               <div>
-                <h3 className="font-display text-lg font-bold text-navy-900 mb-3">Services</h3>
+                <h3 className="font-display text-lg font-bold text-ink-900 mb-3">Services</h3>
                 <div className="flex flex-wrap gap-2">
                   {business.services.map((s) => (
-                    <span key={s} className="bg-turquoise-50 text-turquoise-800 text-sm px-3 py-1 rounded-full">{s}</span>
+                    <span key={s} className="bg-travel-50 text-travel-800 text-sm px-3 py-1 rounded-full border border-travel-100">{s}</span>
                   ))}
                 </div>
               </div>
@@ -64,10 +64,10 @@ export function BusinessProfilePage() {
 
             {/* Photos placeholder */}
             <div>
-              <h3 className="font-display text-lg font-bold text-navy-900 mb-3">Photos</h3>
+              <h3 className="font-display text-lg font-bold text-ink-900 mb-3">Photos</h3>
               <div className="grid grid-cols-3 gap-2">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="bg-gradient-to-br from-navy-600 to-turquoise-600 rounded-lg aspect-square flex items-end p-2">
+                  <div key={i} className="bg-gradient-to-br from-travel-600 to-travel-800 rounded-xl aspect-square flex items-end p-2">
                     <span className="text-white/40 text-xs">Photo {i}</span>
                   </div>
                 ))}
@@ -76,17 +76,17 @@ export function BusinessProfilePage() {
             </div>
 
             {business.ownerStory && (
-              <div className="bg-sand-50 rounded-xl p-5 border-l-4 border-sand-400">
-                <h3 className="font-display text-lg font-bold text-navy-900 mb-2">Owner Story</h3>
-                <p className="text-navy-600 italic">{business.ownerStory}</p>
+              <div className="bg-surface-subtle rounded-2xl p-5 border-l-4 border-travel-500">
+                <h3 className="font-display text-lg font-bold text-ink-900 mb-2">Owner Story</h3>
+                <p className="text-ink-600 italic">{business.ownerStory}</p>
               </div>
             )}
 
             {/* Map placeholder */}
             <div>
-              <h3 className="font-display text-lg font-bold text-navy-900 mb-3">Location</h3>
-              <div className="bg-gradient-to-br from-turquoise-100 to-navy-100 rounded-xl h-40 flex items-center justify-center">
-                <p className="text-navy-400 text-sm">Map — {business.location}</p>
+              <h3 className="font-display text-lg font-bold text-ink-900 mb-3">Location</h3>
+              <div className="bg-travel-50 rounded-2xl h-40 flex items-center justify-center border border-travel-100">
+                <p className="text-ink-500 text-sm">Map — {business.location}</p>
                 {/* TODO: Integrate map provider */}
               </div>
             </div>
@@ -94,43 +94,43 @@ export function BusinessProfilePage() {
 
           {/* Sidebar */}
           <aside className="space-y-5">
-            <div className="bg-sand-50 rounded-xl p-4 border border-sand-200">
-              <h3 className="font-display font-bold text-navy-900 mb-4">Contact Information</h3>
+            <div className="modern-card p-4">
+              <h3 className="font-display font-bold text-ink-900 mb-4">Contact Information</h3>
               <div className="space-y-3">
                 {business.location && (
-                  <div className="flex items-start gap-2 text-sm text-navy-600">
-                    <MapPin size={15} className="text-navy-400 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2 text-sm text-ink-600">
+                    <MapPin size={15} className="text-ink-400 shrink-0 mt-0.5" />
                     {business.location}
                   </div>
                 )}
                 {business.phone && (
-                  <div className="flex items-center gap-2 text-sm text-navy-600">
-                    <Phone size={15} className="text-navy-400" />
+                  <div className="flex items-center gap-2 text-sm text-ink-600">
+                    <Phone size={15} className="text-ink-400" />
                     {business.phone}
                   </div>
                 )}
                 {business.email && (
-                  <div className="flex items-center gap-2 text-sm text-navy-600">
-                    <Mail size={15} className="text-navy-400" />
+                  <div className="flex items-center gap-2 text-sm text-ink-600">
+                    <Mail size={15} className="text-ink-400" />
                     {business.email}
                   </div>
                 )}
                 {business.website && (
-                  <div className="flex items-center gap-2 text-sm text-turquoise-700">
-                    <Globe size={15} className="text-navy-400" />
-                    <a href={business.website} className="hover:underline">{business.website}</a>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Globe size={15} className="text-ink-400" />
+                    <a href={business.website} className="safe-link text-sm">{business.website}</a>
                   </div>
                 )}
               </div>
             </div>
 
             {business.hours && (
-              <div className="bg-white rounded-xl p-4 border border-sand-100">
+              <div className="modern-card p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <Clock size={16} className="text-navy-400" />
-                  <h4 className="font-semibold text-navy-900">Opening Hours</h4>
+                  <Clock size={16} className="text-ink-400" />
+                  <h4 className="font-semibold text-ink-900">Opening Hours</h4>
                 </div>
-                <p className="text-navy-600 text-sm">{business.hours}</p>
+                <p className="text-ink-600 text-sm">{business.hours}</p>
               </div>
             )}
           </aside>
@@ -139,7 +139,7 @@ export function BusinessProfilePage() {
         {/* Related businesses */}
         {related.length > 0 && (
           <div className="mt-10">
-            <h3 className="font-display text-xl font-bold text-navy-900 mb-5">Related Businesses</h3>
+            <h3 className="font-display text-xl font-bold text-ink-900 mb-5">Related Businesses</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {related.map((b) => (
                 <BusinessCard key={b.id} business={b} />

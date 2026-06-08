@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 const NAV_ITEMS = [
@@ -31,7 +30,7 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="bg-navy-900 text-white z-30 sticky top-[105px] md:top-[89px]">
+    <nav className="site-nav sticky top-[105px] md:top-[89px] z-30">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center overflow-x-auto scrollbar-hide">
           {NAV_ITEMS.map((item) => {
@@ -41,10 +40,10 @@ export function Navbar() {
               <Link
                 key={item.key}
                 to={item.href}
-                className={`whitespace-nowrap px-3 py-3 text-xs font-medium transition-colors border-b-2 ${
+                className={`whitespace-nowrap px-3 py-3 text-xs font-semibold transition-colors border-b-2 ${
                   isActive
-                    ? 'border-turquoise-400 text-turquoise-400'
-                    : 'border-transparent hover:text-turquoise-300 hover:border-turquoise-600'
+                    ? 'border-sun-300 text-sun-300'
+                    : 'border-transparent text-white/80 hover:text-white hover:border-white/30'
                 }`}
               >
                 {label}
@@ -63,10 +62,10 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-navy-950/95 overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-travel-950/98 overflow-y-auto">
       <div className="max-w-sm mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-8">
-          <span className="font-display text-xl font-bold text-white">Raizal<span className="text-turquoise-400">.tv</span></span>
+          <span className="font-display text-xl font-bold text-white">Raizal<span className="text-sun-300">.tv</span></span>
           <button onClick={onClose} className="text-white/60 hover:text-white text-2xl leading-none">✕</button>
         </div>
         <div className="grid grid-cols-2 gap-2">
@@ -77,7 +76,7 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                 key={item.key}
                 to={item.href}
                 onClick={onClose}
-                className="px-3 py-2.5 rounded-lg text-white/80 hover:text-white hover:bg-navy-800 text-sm font-medium transition-colors"
+                className="px-3 py-2.5 rounded-xl text-white/80 hover:text-white hover:bg-travel-800 text-sm font-medium transition-colors"
               >
                 {label}
               </Link>

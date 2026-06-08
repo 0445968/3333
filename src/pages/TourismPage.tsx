@@ -18,33 +18,33 @@ export function TourismPage() {
   const tourGuides = businesses.filter((b) => b.category === 'Tour Guides');
 
   return (
-    <div className="bg-white">
+    <div className="app-page">
       {/* Hero */}
-      <div className="bg-caribbean-gradient py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <Compass size={36} className="text-turquoise-300 mx-auto mb-4" />
+      <div className="bg-travel-800 py-16 text-white">
+        <div className="content-shell text-center">
+          <Compass size={36} className="text-aqua-300 mx-auto mb-4" />
           <h1 className="font-display text-5xl font-bold mb-3">{t.tourism.heroTitle}</h1>
           <p className="text-white/70 text-xl max-w-2xl mx-auto">{t.tourism.heroSub}</p>
         </div>
       </div>
 
       {/* Responsible tourism message */}
-      <div className="bg-palm-50 border-y border-palm-200 py-8">
+      <div className="bg-emerald-50 border-y border-emerald-100 py-8">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <Leaf size={24} className="text-palm-600 mx-auto mb-3" />
-          <p className="text-navy-700 text-lg font-display leading-relaxed">{t.tourism.responsibleMessage}</p>
+          <Leaf size={24} className="text-emerald-700 mx-auto mb-3" />
+          <p className="text-ink-800 text-lg font-display leading-relaxed">{t.tourism.responsibleMessage}</p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-10 space-y-12">
+      <div className="content-shell py-10 space-y-12">
         {/* Places to explore */}
         <section>
-          <h2 className="font-display text-2xl font-bold text-navy-900 mb-5">Places to Explore</h2>
+          <h2 className="font-display text-2xl font-bold text-ink-900 mb-5">Places to Explore</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PLACES.map((place) => (
-              <div key={place.name} className="bg-gradient-to-br from-turquoise-600 to-navy-800 rounded-xl p-5 text-white">
-                <MapPin size={18} className="text-turquoise-300 mb-2" />
-                <h3 className="font-display font-bold text-lg">{place.name}</h3>
+              <div key={place.name} className="modern-panel-blue p-5">
+                <MapPin size={18} className="text-aqua-300 mb-2" />
+                <h3 className="font-display font-bold text-white text-lg">{place.name}</h3>
                 <p className="text-white/70 text-sm mt-1">{place.desc}</p>
               </div>
             ))}
@@ -54,7 +54,7 @@ export function TourismPage() {
         {/* Local guides */}
         {tourGuides.length > 0 && (
           <section>
-            <h2 className="font-display text-2xl font-bold text-navy-900 mb-5">Local Tour Guides</h2>
+            <h2 className="font-display text-2xl font-bold text-ink-900 mb-5">Local Tour Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {tourGuides.map((b) => (
                 <BusinessCard key={b.id} business={b} />
@@ -64,9 +64,9 @@ export function TourismPage() {
         )}
 
         {/* Cultural etiquette */}
-        <section className="bg-sand-50 rounded-2xl p-6">
-          <h2 className="font-display text-2xl font-bold text-navy-900 mb-4">Cultural Etiquette</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-navy-600 text-sm">
+        <section className="bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+          <h2 className="font-display text-2xl font-bold text-ink-900 mb-4">Cultural Etiquette</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-ink-600 text-sm">
             <p>• Greet people warmly. Community connections matter deeply here.</p>
             <p>• Ask before photographing people or private properties.</p>
             <p>• Support Raizal-owned businesses and local guides.</p>
@@ -79,12 +79,12 @@ export function TourismPage() {
         </section>
 
         {/* Environment protection */}
-        <section className="bg-palm-50 rounded-2xl p-6 border border-palm-200">
+        <section className="bg-emerald-50 rounded-3xl p-6 border border-emerald-100">
           <div className="flex items-start gap-4">
-            <Leaf size={24} className="text-palm-700 shrink-0 mt-1" />
+            <Leaf size={24} className="text-emerald-700 shrink-0 mt-1" />
             <div>
-              <h3 className="font-display text-xl font-bold text-navy-900 mb-2">Protecting the Environment</h3>
-              <p className="text-navy-600 text-sm leading-relaxed">
+              <h3 className="font-display text-xl font-bold text-ink-900 mb-2">Protecting the Environment</h3>
+              <p className="text-ink-600 text-sm leading-relaxed">
                 The Seaflower Biosphere Reserve is one of the most biodiverse marine areas in the world. Visitors play a critical role in protecting it. Use reef-safe sunscreen, never anchor on coral, avoid single-use plastics, and follow all guidelines from local dive operators and park authorities.
               </p>
             </div>
@@ -92,11 +92,11 @@ export function TourismPage() {
         </section>
 
         {/* Directory tie-in */}
-        <div className="bg-navy-900 rounded-2xl p-6 text-white text-center">
-          <Users size={28} className="text-turquoise-300 mx-auto mb-3" />
-          <h3 className="font-display text-2xl font-bold mb-2">Find Local Businesses</h3>
+        <div className="modern-panel-blue p-6 text-center">
+          <Users size={28} className="text-aqua-300 mx-auto mb-3" />
+          <h3 className="font-display text-2xl font-bold text-white mb-2">Find Local Businesses</h3>
           <p className="text-white/60 mb-4">Restaurants, guesthouses, guides, and more — all Raizal-owned and community-supported.</p>
-          <Link to="/directory" className="inline-flex items-center gap-2 bg-turquoise-600 hover:bg-turquoise-500 text-white font-medium px-5 py-2.5 rounded-lg transition-colors">
+          <Link to="/directory" className="inline-flex items-center gap-2 bg-sun-300 hover:bg-sun-400 text-ink-900 font-semibold px-5 py-2.5 rounded-xl transition-colors">
             Browse the Directory
           </Link>
         </div>

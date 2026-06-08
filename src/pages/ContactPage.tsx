@@ -19,8 +19,8 @@ export function ContactPage() {
   const [activeTab, setActiveTab] = useState('general');
 
   return (
-    <div className="bg-white">
-      <div className="bg-caribbean-gradient py-12 text-white">
+    <div className="app-page">
+      <div className="bg-travel-800 py-12 text-white">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="font-display text-4xl font-bold mb-2">Contact Raizal.tv</h1>
           <p className="text-white/60">Stories, submissions, partnerships — your voice matters.</p>
@@ -36,10 +36,10 @@ export function ContactPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold transition-colors ${
                   activeTab === tab.id
-                    ? 'bg-navy-900 text-white'
-                    : 'bg-sand-100 text-navy-700 hover:bg-sand-200'
+                    ? 'bg-travel-700 text-white'
+                    : 'bg-surface-subtle text-ink-700 border border-surface-border hover:bg-travel-50 hover:text-travel-800'
                 }`}
               >
                 <Icon size={14} />
@@ -50,18 +50,18 @@ export function ContactPage() {
         </div>
 
         {/* Form */}
-        <div className="bg-sand-50 rounded-2xl p-6">
-          <h2 className="font-display text-xl font-bold text-navy-900 mb-5">
-            {TABS.find((t) => t.id === activeTab)?.label}
+        <div className="bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+          <h2 className="font-display text-xl font-bold text-ink-900 mb-5">
+            {TABS.find((tab) => tab.id === activeTab)?.label}
           </h2>
           <div className="space-y-4 max-w-xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" placeholder={t.common.name} className="w-full px-4 py-2.5 rounded-lg border border-sand-200 text-navy-700 text-sm focus:outline-none focus:border-turquoise-400" />
-              <input type="email" placeholder={t.common.email} className="w-full px-4 py-2.5 rounded-lg border border-sand-200 text-navy-700 text-sm focus:outline-none focus:border-turquoise-400" />
+              <input type="text" placeholder={t.common.name} className="w-full px-4 py-2.5 rounded-xl border border-surface-border text-ink-700 bg-white text-sm focus:outline-none focus:border-travel-500" />
+              <input type="email" placeholder={t.common.email} className="w-full px-4 py-2.5 rounded-xl border border-surface-border text-ink-700 bg-white text-sm focus:outline-none focus:border-travel-500" />
             </div>
-            <input type="text" placeholder={t.common.subject} className="w-full px-4 py-2.5 rounded-lg border border-sand-200 text-navy-700 text-sm focus:outline-none focus:border-turquoise-400" />
-            <textarea rows={6} placeholder={t.common.message} className="w-full px-4 py-2.5 rounded-lg border border-sand-200 text-navy-700 text-sm focus:outline-none focus:border-turquoise-400 resize-none" />
-            <button className="w-full bg-navy-900 hover:bg-navy-800 text-white font-medium py-3 rounded-lg transition-colors">
+            <input type="text" placeholder={t.common.subject} className="w-full px-4 py-2.5 rounded-xl border border-surface-border text-ink-700 bg-white text-sm focus:outline-none focus:border-travel-500" />
+            <textarea rows={6} placeholder={t.common.message} className="w-full px-4 py-2.5 rounded-xl border border-surface-border text-ink-700 bg-white text-sm focus:outline-none focus:border-travel-500 resize-none" />
+            <button className="w-full bg-travel-700 hover:bg-travel-800 text-white font-semibold py-3 rounded-xl transition-colors">
               {t.common.send}
             </button>
           </div>

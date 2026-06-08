@@ -42,17 +42,17 @@ export function CategoryPage() {
   // TODO: Replace with CMS data by category slug
 
   return (
-    <div className="bg-white">
+    <div className="app-page">
       {/* Category hero */}
-      <div className="bg-caribbean-gradient py-10">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="bg-travel-800 py-10">
+        <div className="content-shell">
           <Badge label={categoryLabel} className="mb-3" />
           <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2">{categoryLabel}</h1>
           <p className="text-white/60 max-w-xl">{description}</p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="content-shell py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main content */}
           <main className="lg:col-span-8">
@@ -71,7 +71,7 @@ export function CategoryPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-navy-400">
+              <div className="text-center py-12 text-ink-500">
                 <p className="text-lg font-display">More stories coming soon.</p>
                 <p className="text-sm mt-1">This section is growing — check back shortly.</p>
               </div>
@@ -81,8 +81,8 @@ export function CategoryPage() {
           {/* Sidebar */}
           <aside className="lg:col-span-4 space-y-6">
             {/* Popular */}
-            <div className="bg-sand-50 rounded-xl p-4">
-              <h3 className="font-display text-navy-900 font-bold text-base mb-4 pb-2 border-b border-sand-200">
+            <div className="modern-card p-4">
+              <h3 className="font-display text-ink-900 font-bold text-base mb-4 pb-2 border-b border-surface-border">
                 Popular Stories
               </h3>
               <div className="flex flex-col gap-4">
@@ -96,8 +96,8 @@ export function CategoryPage() {
             {sidebarAd && <AdBanner ad={sidebarAd} variant="sidebar" />}
 
             {/* Related categories */}
-            <div className="bg-white rounded-xl border border-sand-100 p-4">
-              <h3 className="font-display text-navy-900 font-bold text-base mb-3">Browse More</h3>
+            <div className="modern-card p-4">
+              <h3 className="font-display text-ink-900 font-bold text-base mb-3">Browse More</h3>
               <div className="flex flex-wrap gap-2">
                 {['culture', 'music', 'food', 'environment', 'sports', 'tourism'].map((cat) => (
                   <Link key={cat} to={cat === 'music' ? '/music' : `/category/${cat}`}>
@@ -108,11 +108,11 @@ export function CategoryPage() {
             </div>
 
             {/* Newsletter inline */}
-            <div className="bg-navy-900 rounded-xl p-4 text-white">
-              <h3 className="font-display font-bold text-base mb-1">{t.home.newsletter}</h3>
+            <div className="modern-panel-blue p-4">
+              <h3 className="font-display font-bold text-white text-base mb-1">{t.home.newsletter}</h3>
               <p className="text-white/60 text-sm mb-3">{t.home.newsletterSub}</p>
               <input type="email" placeholder={t.home.emailPlaceholder} className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm mb-2 focus:outline-none" />
-              <button className="w-full bg-turquoise-600 hover:bg-turquoise-500 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+              <button className="w-full bg-sun-300 hover:bg-sun-400 text-ink-900 text-sm font-semibold py-2 rounded-lg transition-colors">
                 {t.home.subscribeBtn}
               </button>
             </div>

@@ -1,5 +1,5 @@
 import { articles, getArticlesByCategory } from '../data/articles';
-import { businesses, getFeaturedBusinesses } from '../data/businesses';
+import { getFeaturedBusinesses } from '../data/businesses';
 import { recipes } from '../data/recipes';
 import { archiveEvents } from '../data/events';
 import { memorials } from '../data/memorials';
@@ -31,7 +31,7 @@ export function HomePage() {
   const homepageAd = ads.find((a) => a.placement === 'homepage-banner');
 
   return (
-    <div>
+    <div className="app-page">
       <BreakingNewsBar />
       <HeroSection />
       <CategoryRail />
@@ -40,42 +40,28 @@ export function HomePage() {
       <LatestArticles />
 
       {/* Culture section */}
-      <section className="bg-sand-50 py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.cultureHighlights}
-            subtitle={t.home.cultureSub}
-            href="/category/culture"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-surface-subtle py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.cultureHighlights} subtitle={t.home.cultureSub} href="/category/culture" viewAllLabel={t.viewAll} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {cultureArticles.map((a) => (
-              <ArticleCard key={a.id} article={a} />
-            ))}
+            {cultureArticles.map((a) => <ArticleCard key={a.id} article={a} />)}
           </div>
         </div>
       </section>
 
       {/* Food + Recipes */}
-      <section className="py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.fromKitchen}
-            subtitle={t.home.kitchenSub}
-            href="/recipes"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-white py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.fromKitchen} subtitle={t.home.kitchenSub} href="/recipes" viewAllLabel={t.viewAll} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {recipes.slice(0, 4).map((r) => (
-              <RecipeCard key={r.id} recipe={r} />
-            ))}
+            {recipes.slice(0, 4).map((r) => <RecipeCard key={r.id} recipe={r} />)}
           </div>
         </div>
       </section>
 
       {/* Weather + Markets row */}
-      <section className="bg-navy-950 py-10">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-travel-900 py-10">
+        <div className="content-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <h3 className="font-display text-xl font-bold text-white mb-4">{t.home.currentWeather}</h3>
@@ -90,46 +76,33 @@ export function HomePage() {
       </section>
 
       {/* Environment */}
-      <section className="py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.environmentWatch}
-            subtitle={t.home.environmentSub}
-            href="/category/environment"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-white py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.environmentWatch} subtitle={t.home.environmentSub} href="/category/environment" viewAllLabel={t.viewAll} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {envArticles.map((a) => (
-              <ArticleCard key={a.id} article={a} />
-            ))}
+            {envArticles.map((a) => <ArticleCard key={a.id} article={a} />)}
           </div>
         </div>
       </section>
 
       {/* Business Spotlight */}
-      <section className="bg-sand-50 py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.businessSpotlight}
-            subtitle={t.home.businessSub}
-            href="/directory"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-surface-subtle py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.businessSpotlight} subtitle={t.home.businessSub} href="/directory" viewAllLabel={t.viewAll} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredBusinesses.map((b) => (
-              <BusinessCard key={b.id} business={b} />
-            ))}
+            {featuredBusinesses.map((b) => <BusinessCard key={b.id} business={b} />)}
           </div>
         </div>
       </section>
 
       {/* Tourism Preview */}
-      <section className="relative py-14 bg-caribbean-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-travel-800 py-14 text-white">
+        <div className="content-shell">
           <div className="max-w-2xl">
-            <h2 className="font-display text-3xl font-bold mb-3">{t.home.tourismGuide}</h2>
+            <p className="section-label text-sun-300 mb-2">{t.nav.tourism}</p>
+            <h2 className="font-display text-3xl font-bold text-white mb-3">{t.home.tourismGuide}</h2>
             <p className="text-white/70 mb-5">{t.home.tourismSub}</p>
-            <a href="/tourism" className="inline-flex items-center gap-2 bg-turquoise-500 hover:bg-turquoise-400 text-white font-medium px-5 py-2.5 rounded-lg transition-colors">
+            <a href="/tourism" className="primary-button">
               {t.learnMore}
             </a>
           </div>
@@ -137,42 +110,28 @@ export function HomePage() {
       </section>
 
       {/* Memorials preview */}
-      <section className="bg-sand-50 py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.memorialsPreview}
-            subtitle={t.home.memorialsSub}
-            href="/memorials"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-white py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.memorialsPreview} subtitle={t.home.memorialsSub} href="/memorials" viewAllLabel={t.viewAll} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {memorials.slice(0, 3).map((m) => (
-              <MemorialCard key={m.id} memorial={m} />
-            ))}
+            {memorials.slice(0, 3).map((m) => <MemorialCard key={m.id} memorial={m} />)}
           </div>
         </div>
       </section>
 
       {/* Archive Preview */}
-      <section className="py-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <SectionHeader
-            title={t.home.archivePreview}
-            subtitle={t.home.archiveSub}
-            href="/archive"
-            viewAllLabel={t.viewAll}
-          />
+      <section className="bg-surface-subtle py-10">
+        <div className="content-shell">
+          <SectionHeader title={t.home.archivePreview} subtitle={t.home.archiveSub} href="/archive" viewAllLabel={t.viewAll} />
           <div className="flex flex-col gap-3">
-            {archiveEvents.slice(0, 4).map((e) => (
-              <EventCard key={e.id} event={e} />
-            ))}
+            {archiveEvents.slice(0, 4).map((e) => <EventCard key={e.id} event={e} />)}
           </div>
         </div>
       </section>
 
       {/* Ad banner */}
       {homepageAd && (
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="content-shell py-4">
           <AdBanner ad={homepageAd} />
         </div>
       )}

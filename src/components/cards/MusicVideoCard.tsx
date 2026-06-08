@@ -4,21 +4,21 @@ import { formatShortDate, CATEGORY_GRADIENT } from '../../lib/utils';
 import type { MusicVideo } from '../../types';
 
 export function MusicVideoCard({ video }: { video: MusicVideo }) {
-  const gradient = CATEGORY_GRADIENT[video.category.toLowerCase()] ?? 'from-coral-700 to-navy-900';
+  const gradient = CATEGORY_GRADIENT[video.category.toLowerCase()] ?? 'from-travel-700 to-travel-900';
 
   return (
-    <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-sand-100 hover:shadow-md transition-shadow">
-      <div className={`relative bg-gradient-to-br ${gradient} aspect-video flex items-center justify-center`}>
-        <PlayCircle size={44} className="text-white/70 group-hover:text-white group-hover:scale-110 transition-all" />
-        <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded flex items-center gap-1">
+    <div className="group modern-card-hover">
+      <div className={`relative bg-gradient-to-br ${gradient} aspect-video flex items-center justify-center rounded-t-3xl overflow-hidden`}>
+        <PlayCircle size={40} className="text-white/60 group-hover:text-white group-hover:scale-110 transition-all" />
+        <div className="absolute bottom-2 right-2 bg-ink-900/80 text-white text-xs px-1.5 py-0.5 rounded-lg flex items-center gap-1">
           <Clock size={10} /> {video.duration}
         </div>
       </div>
       <div className="p-3">
         <Badge label={video.category} />
-        <h4 className="text-navy-900 font-semibold text-sm mt-1 line-clamp-1">{video.title}</h4>
-        <p className="text-turquoise-700 text-xs">{video.artist}</p>
-        <p className="text-navy-400 text-xs mt-1">{formatShortDate(video.publishedAt)}</p>
+        <h4 className="text-ink-900 font-semibold text-sm mt-1.5 line-clamp-1">{video.title}</h4>
+        <p className="text-travel-700 font-medium text-xs">{video.artist}</p>
+        <p className="text-ink-400 text-xs mt-1">{formatShortDate(video.publishedAt)}</p>
       </div>
     </div>
   );

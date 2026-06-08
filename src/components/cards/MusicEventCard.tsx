@@ -24,18 +24,18 @@ export function MusicEventCard({ event }: { event: MusicEvent }) {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-white rounded-xl border border-sand-100 shadow-sm p-4 hover:shadow-md transition-shadow">
+    <div className="modern-card-hover p-4">
       <div className="flex items-start gap-3">
-        <div className="shrink-0 bg-navy-900 text-white rounded-lg px-3 py-2 text-center min-w-[56px]">
-          <span className="text-turquoise-400 text-xs font-medium block">{event.type}</span>
+        <div className="shrink-0 bg-travel-700 text-white rounded-xl px-3 py-2 text-center min-w-[56px]">
+          <span className="text-sun-300 text-xs font-bold block leading-none">{event.type}</span>
         </div>
         <div className="flex-1">
-          <h4 className="font-display text-navy-900 font-bold text-base leading-tight">{event.name}</h4>
-          <div className="flex flex-wrap gap-2 mt-1 text-navy-400 text-xs">
+          <h4 className="font-display text-ink-900 font-bold text-base leading-tight">{event.name}</h4>
+          <div className="flex flex-wrap gap-2 mt-1 text-ink-500 text-xs">
             <span className="flex items-center gap-1"><Calendar size={11} /> {event.date}</span>
             <span className="flex items-center gap-1"><MapPin size={11} /> {event.location}</span>
           </div>
-          <p className="text-navy-500 text-sm mt-2">{event.description}</p>
+          <p className="text-ink-600 text-sm mt-2">{event.description}</p>
           <Button variant="ghost" size="sm" className="mt-2">
             <Calendar size={12} /> {t.music.addToCalendar}
           </Button>

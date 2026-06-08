@@ -22,14 +22,14 @@ export function CategoryRail() {
   const { t } = useLanguage();
 
   return (
-    <div className="border-y border-sand-200 bg-sand-50 py-3">
+    <div className="border-y border-surface-border bg-white py-3">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.key}
               to={cat.href}
-              className="flex items-center gap-1.5 whitespace-nowrap px-3 py-2 rounded-lg bg-white border border-sand-200 text-navy-700 hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all text-xs font-medium shadow-sm"
+              className="category-pill"
             >
               <span>{cat.emoji}</span>
               {t.nav[cat.key as keyof typeof t.nav]}
