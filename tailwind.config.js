@@ -152,8 +152,7 @@ export default {
 
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Newsreader', 'Georgia', 'serif'],
-        display: ['Newsreader', 'Georgia', 'serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
 
       boxShadow: {
