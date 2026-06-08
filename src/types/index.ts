@@ -9,6 +9,7 @@ export interface Article {
   publishedAt: string;
   readingTime: number;
   image: string;
+  imageAlt?: string;
   featured: boolean;
   body?: string;
 }
