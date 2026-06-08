@@ -25,7 +25,7 @@ export const articles: Article[] = [
     author: 'James Archibald',
     publishedAt: '2026-06-03',
     readingTime: 5,
-    image: 'fishing',
+    image: 'images/segments/fisherman.jpeg',
     featured: false,
   },
   {
