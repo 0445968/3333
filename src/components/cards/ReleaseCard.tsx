@@ -6,10 +6,10 @@ import type { MusicRelease } from '../../types';
 
 const TYPE_COLORS: Record<string, string> = {
   Album:         'bg-travel-100 text-travel-800',
-  Single:        'bg-aqua-100 text-aqua-800',
+  Single:        'bg-skybrand-100 text-skybrand-800',
   EP:            'bg-sun-100 text-sun-800',
   'Music Video': 'bg-ink-100 text-ink-700',
-  'Live Session': 'bg-emerald-100 text-emerald-800',
+  'Live Session': 'bg-palm-100 text-palm-800',
 };
 
 export function ReleaseCard({ release }: { release: MusicRelease }) {

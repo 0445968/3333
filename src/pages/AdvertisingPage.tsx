@@ -37,7 +37,7 @@ export function AdvertisingPage() {
             { label: 'Multi-platform', desc: 'Homepage, articles, video segments, newsletter, and directory — your brand across every touchpoint.' },
           ].map((item) => (
             <div key={item.label} className="modern-card p-5">
-              <CheckCircle size={20} className="text-emerald-700 mb-2" />
+              <CheckCircle size={20} className="text-palm-700 mb-2" />
               <h3 className="font-display font-bold text-ink-900">{item.label}</h3>
               <p className="text-ink-600 text-sm mt-1">{item.desc}</p>
             </div>

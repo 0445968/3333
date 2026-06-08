@@ -35,7 +35,7 @@ export function MovementBadge({ movement, newLabel = 'NEW', reentryLabel = 'RE' 
     return <span className="inline-block px-2 py-0.5 text-xs font-bold rounded bg-sun-300 text-ink-900">{reentryLabel}</span>;
   }
   if (movement === 'up') {
-    return <span className="text-emerald-700 font-bold text-sm">▲</span>;
+    return <span className="text-palm-700 font-bold text-sm">▲</span>;
   }
   if (movement === 'down') {
     return <span className="text-coral-700 font-bold text-sm">▼</span>;

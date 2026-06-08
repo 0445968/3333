@@ -22,16 +22,16 @@ export function TourismPage() {
       {/* Hero */}
       <div className="bg-travel-800 py-16 text-white">
         <div className="content-shell text-center">
-          <Compass size={36} className="text-aqua-300 mx-auto mb-4" />
+          <Compass size={36} className="text-skybrand-300 mx-auto mb-4" />
           <h1 className="font-display text-5xl font-bold mb-3">{t.tourism.heroTitle}</h1>
           <p className="text-white/70 text-xl max-w-2xl mx-auto">{t.tourism.heroSub}</p>
         </div>
       </div>
 
       {/* Responsible tourism message */}
-      <div className="bg-emerald-50 border-y border-emerald-100 py-8">
+      <div className="bg-palm-50 border-y border-palm-100 py-8">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <Leaf size={24} className="text-emerald-700 mx-auto mb-3" />
+          <Leaf size={24} className="text-palm-700 mx-auto mb-3" />
           <p className="text-ink-800 text-lg font-display leading-relaxed">{t.tourism.responsibleMessage}</p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export function TourismPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {PLACES.map((place) => (
               <div key={place.name} className="modern-panel-blue p-5">
-                <MapPin size={18} className="text-aqua-300 mb-2" />
+                <MapPin size={18} className="text-skybrand-300 mb-2" />
                 <h3 className="font-display font-bold text-white text-lg">{place.name}</h3>
                 <p className="text-white/70 text-sm mt-1">{place.desc}</p>
               </div>
@@ -79,9 +79,9 @@ export function TourismPage() {
         </section>
 
         {/* Environment protection */}
-        <section className="bg-emerald-50 rounded-3xl p-6 border border-emerald-100">
+        <section className="bg-palm-50 rounded-3xl p-6 border border-palm-100">
           <div className="flex items-start gap-4">
-            <Leaf size={24} className="text-emerald-700 shrink-0 mt-1" />
+            <Leaf size={24} className="text-palm-700 shrink-0 mt-1" />
             <div>
               <h3 className="font-display text-xl font-bold text-ink-900 mb-2">Protecting the Environment</h3>
               <p className="text-ink-600 text-sm leading-relaxed">
@@ -93,7 +93,7 @@ export function TourismPage() {
 
         {/* Directory tie-in */}
         <div className="modern-panel-blue p-6 text-center">
-          <Users size={28} className="text-aqua-300 mx-auto mb-3" />
+          <Users size={28} className="text-skybrand-300 mx-auto mb-3" />
           <h3 className="font-display text-2xl font-bold text-white mb-2">Find Local Businesses</h3>
           <p className="text-white/60 mb-4">Restaurants, guesthouses, guides, and more — all Raizal-owned and community-supported.</p>
           <Link to="/directory" className="inline-flex items-center gap-2 bg-sun-300 hover:bg-sun-400 text-ink-900 font-semibold px-5 py-2.5 rounded-xl transition-colors">

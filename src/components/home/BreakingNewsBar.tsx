@@ -7,16 +7,21 @@ export function BreakingNewsBar() {
   const headlines = articles.slice(0, 5).map((a) => a.title);
 
   return (
-    <div className="breaking-bar py-2 overflow-hidden">
+    <div className="bg-palm-600 py-2 overflow-hidden text-white">
       <div className="max-w-7xl mx-auto px-4 flex items-center gap-3">
-        <div className="flex items-center gap-1.5 shrink-0 bg-white/20 rounded-lg px-2 py-0.5">
+        <div className="flex items-center gap-1.5 shrink-0 rounded-lg bg-white/20 px-2 py-0.5">
           <Zap size={12} className="text-white" />
-          <span className="text-xs font-bold uppercase tracking-wider text-white">{t.home.breaking}</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-white">
+            {t.home.breaking}
+          </span>
         </div>
-        <div className="overflow-hidden flex-1">
-          <div className="flex gap-12 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
-            {[...headlines, ...headlines].map((h, i) => (
-              <span key={i} className="text-sm font-medium text-white">{h} &nbsp;·&nbsp;</span>
+
+        <div className="relative overflow-hidden flex-1">
+          <div className="marquee-track flex w-max gap-12 whitespace-nowrap">
+            {[...headlines, ...headlines, ...headlines].map((headline, index) => (
+              <span key={`${headline}-${index}`} className="text-sm font-medium text-white">
+                {headline} <span className="mx-4 text-white/70">•</span>
+              </span>
             ))}
           </div>
         </div>

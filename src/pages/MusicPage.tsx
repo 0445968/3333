@@ -104,7 +104,7 @@ export function MusicPage() {
             <p className="text-white/50 text-sm mt-0.5">{t.music.lyricsSub}</p>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-2xl p-3 mb-5 flex items-start gap-2">
-            <span className="text-aqua-300 text-xs shrink-0 mt-0.5">ℹ</span>
+            <span className="text-skybrand-300 text-xs shrink-0 mt-0.5">ℹ</span>
             <p className="text-white/50 text-xs">{t.music.lyricsNote}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

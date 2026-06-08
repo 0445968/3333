@@ -41,7 +41,7 @@ export function TopBar() {
           {/* Right */}
           <div className="flex items-center gap-3 ml-auto">
             <Link to="/weather" className="hidden sm:flex items-center gap-1 hover:text-white transition-colors">
-              <Thermometer size={11} className="text-aqua-300" />
+              <Thermometer size={11} className="text-skybrand-300" />
               <span>31°C · San Andrés</span>
             </Link>
 

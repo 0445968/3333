@@ -5,7 +5,7 @@ import type { Ad } from '../../types';
 const BG: Record<string, string> = {
   'coral-reef-ad': 'bg-travel-700',
   'restaurant-ad': 'bg-travel-800',
-  'lodge-ad':      'bg-aqua-700',
+  'lodge-ad':      'bg-skybrand-700',
   'self-promo':    'bg-ink-800',
 };
 

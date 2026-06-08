@@ -6,7 +6,7 @@ export function EventCard({ event }: { event: ArchiveEvent }) {
   return (
     <div className="modern-card-hover flex gap-4 p-4">
       <div className="shrink-0 w-16 h-16 bg-travel-700 rounded-2xl flex flex-col items-center justify-center text-white">
-        <span className="text-aqua-300 text-xs font-semibold">{event.island.slice(0, 3).toUpperCase()}</span>
+        <span className="text-skybrand-300 text-xs font-semibold">{event.island.slice(0, 3).toUpperCase()}</span>
         <span className="text-white font-display font-bold text-lg leading-tight">{event.year}</span>
       </div>
       <div className="flex-1 min-w-0">

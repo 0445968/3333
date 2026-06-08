@@ -16,7 +16,7 @@ export function MarketIndicators() {
             <div key={ind.id} className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
               <span className="text-white/70 text-xs">{ind.label}</span>
               <span className="text-white text-xs font-bold">{ind.value}</span>
-              <span className={`flex items-center gap-0.5 text-xs font-semibold ${ind.positive ? 'text-emerald-400' : 'text-coral-400'}`}>
+              <span className={`flex items-center gap-0.5 text-xs font-semibold ${ind.positive ? 'text-palm-400' : 'text-coral-400'}`}>
                 {ind.positive ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
                 {ind.change}
               </span>
@@ -47,7 +47,7 @@ export function MarketWidget() {
             </div>
             <div className="text-right">
               <p className="text-ink-900 font-bold text-sm">{ind.value}</p>
-              <span className={`flex items-center justify-end gap-0.5 text-xs font-semibold ${ind.positive ? 'text-emerald-700' : 'text-coral-700'}`}>
+              <span className={`flex items-center justify-end gap-0.5 text-xs font-semibold ${ind.positive ? 'text-palm-700' : 'text-coral-700'}`}>
                 {ind.positive ? <TrendingUp size={11} /> : ind.change.startsWith('-') ? <TrendingDown size={11} /> : <Minus size={11} />}
                 {ind.change}
               </span>

@@ -15,7 +15,7 @@ export function WeatherPage() {
       {/* Hero */}
       <div className="bg-travel-800 py-12 text-white">
         <div className="content-shell">
-          <Cloud size={32} className="text-aqua-300 mb-3" />
+          <Cloud size={32} className="text-skybrand-300 mb-3" />
           <h1 className="font-display text-4xl font-bold mb-2">Weather & Sea Conditions</h1>
           <p className="text-white/60">San Andrés, Providencia & Santa Catalina</p>
         </div>

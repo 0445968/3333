@@ -18,8 +18,8 @@ export function VideosPage() {
       <div className="bg-travel-950 text-white py-12">
         <div className="content-shell">
           <div className="flex items-center gap-2 mb-2">
-            <Radio size={16} className="text-aqua-300 animate-pulse" />
-            <span className="text-aqua-300 text-xs font-bold uppercase tracking-widest">Raizal.tv</span>
+            <Radio size={16} className="text-skybrand-300 animate-pulse" />
+            <span className="text-skybrand-300 text-xs font-bold uppercase tracking-widest">Raizal.tv</span>
           </div>
           <h1 className="font-display text-4xl font-bold mb-2">{t.home.watchRaizal}</h1>
           <p className="text-white/60 max-w-xl">{t.home.watchSub}</p>
