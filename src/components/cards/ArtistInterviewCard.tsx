@@ -10,7 +10,7 @@ export function ArtistInterviewCard({ interview }: { interview: ArtistInterview 
 
   return (
     <div className="modern-card-hover">
-      <div className="bg-gradient-to-br from-travel-700 to-ink-800 aspect-[3/2] flex items-end p-3 rounded-t-3xl overflow-hidden">
+      <div className="bg-gradient-to-br from-travel-700 to-ink-800 aspect-[3/2] flex items-end p-3 rounded-t-xl overflow-hidden">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center">
             <Mic2 size={14} className="text-white" />

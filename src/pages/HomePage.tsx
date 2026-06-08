@@ -100,7 +100,7 @@ export function HomePage() {
         <div className="content-shell">
           <div className="max-w-2xl">
             <p className="section-label text-sun-300 mb-2">{t.nav.tourism}</p>
-            <h2 className="font-display text-3xl font-bold text-white mb-3">{t.home.tourismGuide}</h2>
+            <h2 className="font-display text-xl font-bold text-white mb-3">{t.home.tourismGuide}</h2>
             <p className="text-white/70 mb-5">{t.home.tourismSub}</p>
             <a href="/tourism" className="primary-button">
               {t.learnMore}

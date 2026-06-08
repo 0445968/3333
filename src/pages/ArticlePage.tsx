@@ -39,7 +39,7 @@ export function ArticlePage() {
           {/* Article body */}
           <article className="lg:col-span-8">
             <Badge label={article.category} className="mb-4" />
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-ink-900 leading-tight mb-3">
+            <h1 className="font-display text-xl md:text-4xl font-bold text-ink-900 leading-tight mb-3">
               {article.title}
             </h1>
             {article.subtitle && (

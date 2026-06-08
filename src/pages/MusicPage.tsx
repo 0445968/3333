@@ -44,7 +44,7 @@ export function MusicPage() {
               <Disc3 size={18} className="text-travel-600" />
               <span className="section-label">Weekly Chart</span>
             </div>
-            <h2 className="font-display text-3xl font-bold text-ink-900">{t.music.chart}</h2>
+            <h2 className="font-display text-xl font-bold text-ink-900">{t.music.chart}</h2>
             <p className="text-ink-500 text-sm mt-0.5">{t.music.chartSub}</p>
           </div>
           <div className="modern-card overflow-hidden">
@@ -155,9 +155,9 @@ export function MusicPage() {
 
       {/* Submit Music callout */}
       <section className="bg-travel-800 py-12 text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+        <div className="max-w-xl mx-auto px-4 text-center">
           <Upload size={32} className="text-white/60 mx-auto mb-3" />
-          <h2 className="font-display text-3xl font-bold mb-3">{t.music.submitTitle}</h2>
+          <h2 className="font-display text-xl font-bold mb-3">{t.music.submitTitle}</h2>
           <p className="text-white/70 mb-6">{t.music.submitSub}</p>
           {/* TODO: Add user submissions workflow */}
           <div className="flex flex-wrap gap-3 justify-center">

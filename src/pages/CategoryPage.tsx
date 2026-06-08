@@ -47,7 +47,7 @@ export function CategoryPage() {
       <div className="bg-travel-800 py-10">
         <div className="content-shell">
           <Badge label={categoryLabel} className="mb-3" />
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2">{categoryLabel}</h1>
+          <h1 className="font-display text-xl md:text-4xl font-bold text-white mb-2">{categoryLabel}</h1>
           <p className="text-white/60 max-w-xl">{description}</p>
         </div>
       </div>

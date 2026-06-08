@@ -25,7 +25,7 @@ export function PlaylistCard({ playlist }: { playlist: Playlist }) {
 
   return (
     <div className="group modern-card-hover">
-      <div className={`bg-gradient-to-br ${playlist.gradient} p-5 flex items-center justify-center rounded-t-3xl`} style={{ minHeight: 90 }}>
+      <div className={`bg-gradient-to-br ${playlist.gradient} p-5 flex items-center justify-center rounded-t-xl`} style={{ minHeight: 90 }}>
         <Headphones size={34} className="text-white/40 group-hover:text-white/70 transition-colors" />
       </div>
       <div className="p-4">

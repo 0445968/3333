@@ -10,7 +10,7 @@ export function BusinessCard({ business }: { business: Business }) {
 
   return (
     <div className="modern-card-hover">
-      <div className="bg-gradient-to-br from-travel-700 to-travel-900 h-20 rounded-t-3xl flex items-end p-3 relative">
+      <div className="bg-gradient-to-br from-travel-700 to-travel-900 h-20 rounded-t-xl flex items-end p-3 relative">
         <span className="text-white/40 text-xs uppercase tracking-wider">{business.category}</span>
         {business.featured && (
           <span className="absolute top-3 right-3 bg-sun-300 text-ink-900 text-xs font-bold px-2 py-0.5 rounded-full">Featured</span>

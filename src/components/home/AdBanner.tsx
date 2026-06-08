@@ -31,7 +31,7 @@ export function AdBanner({ ad, variant = 'banner' }: AdBannerProps) {
   }
 
   return (
-    <Link to={ad.url} className={`block rounded-3xl ${bg} p-5 text-white hover:opacity-90 transition-opacity`}>
+    <Link to={ad.url} className={`block rounded-xl ${bg} p-5 text-white hover:opacity-90 transition-opacity`}>
       <div className="flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2 mb-1">

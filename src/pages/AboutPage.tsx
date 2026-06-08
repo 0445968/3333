@@ -25,7 +25,7 @@ export function AboutPage() {
             <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
               <Radio size={22} className="text-sun-300" />
             </div>
-            <span className="font-display font-bold text-3xl">Raizal<span className="text-sun-300">.tv</span></span>
+            <span className="font-display font-bold text-xl">Raizal<span className="text-sun-300">.tv</span></span>
           </div>
           <h1 className="font-display text-4xl font-bold mb-3">{t.tagline}</h1>
           <p className="text-white/60 text-lg">{t.taglineSub}</p>
@@ -53,7 +53,7 @@ export function AboutPage() {
         </section>
 
         {/* Editorial focus */}
-        <section className="bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+        <section className="bg-surface-subtle rounded-xl p-6 border border-surface-border">
           <h2 className="font-display text-2xl font-bold text-ink-900 mb-4">Editorial Focus</h2>
           <p className="text-ink-600 leading-relaxed">
             Raizal.tv covers culture, music, food, environment, sports, tourism, business, politics, health, education, religion, and community life across San Andrés, Providencia, and Santa Catalina. Our editorial standards prioritize accuracy, community voice, and cultural respect. We publish in English, Español, and Creole to serve all members of our community.
@@ -66,7 +66,7 @@ export function AboutPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {FUTURE_PLANS.map((plan) => (
               <div key={plan.label} className="modern-card-hover p-4 text-center">
-                <span className="text-3xl block mb-2">{plan.icon}</span>
+                <span className="text-xl block mb-2">{plan.icon}</span>
                 <h4 className="font-semibold text-ink-900 text-sm">{plan.label}</h4>
                 <p className="text-ink-500 text-xs mt-1">{plan.desc}</p>
               </div>

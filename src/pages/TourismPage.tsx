@@ -30,7 +30,7 @@ export function TourismPage() {
 
       {/* Responsible tourism message */}
       <div className="bg-palm-50 border-y border-palm-100 py-8">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+        <div className="max-w-xl mx-auto px-4 text-center">
           <Leaf size={24} className="text-palm-700 mx-auto mb-3" />
           <p className="text-ink-800 text-lg font-display leading-relaxed">{t.tourism.responsibleMessage}</p>
         </div>
@@ -64,7 +64,7 @@ export function TourismPage() {
         )}
 
         {/* Cultural etiquette */}
-        <section className="bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+        <section className="bg-surface-subtle rounded-xl p-6 border border-surface-border">
           <h2 className="font-display text-2xl font-bold text-ink-900 mb-4">Cultural Etiquette</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-ink-600 text-sm">
             <p>• Greet people warmly. Community connections matter deeply here.</p>
@@ -79,7 +79,7 @@ export function TourismPage() {
         </section>
 
         {/* Environment protection */}
-        <section className="bg-palm-50 rounded-3xl p-6 border border-palm-100">
+        <section className="bg-palm-50 rounded-xl p-6 border border-palm-100">
           <div className="flex items-start gap-4">
             <Leaf size={24} className="text-palm-700 shrink-0 mt-1" />
             <div>

@@ -117,7 +117,7 @@ export function ArticleCard({ article, variant = 'default' }: ArticleCardProps) 
     return (
       <Link
         to={`/article/${article.slug}`}
-        className="group relative block rounded-3xl overflow-hidden shadow-card-md bg-travel-900"
+        className="group relative block rounded-xl overflow-hidden shadow-card-md bg-travel-900"
       >
         {article.image ? (
           <img

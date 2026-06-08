@@ -50,7 +50,7 @@ export function ContactPage() {
         </div>
 
         {/* Form */}
-        <div className="bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+        <div className="bg-surface-subtle rounded-xl p-6 border border-surface-border">
           <h2 className="font-display text-xl font-bold text-ink-900 mb-5">
             {TABS.find((tab) => tab.id === activeTab)?.label}
           </h2>

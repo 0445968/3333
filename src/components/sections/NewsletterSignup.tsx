@@ -19,7 +19,7 @@ export function NewsletterSignup() {
     <section className="bg-travel-800 py-12">
       <div className="max-w-2xl mx-auto px-4 text-center">
         <Mail size={28} className="text-sun-300 mx-auto mb-3" />
-        <h2 className="font-display text-3xl font-bold text-white mb-2">{t.home.newsletter}</h2>
+        <h2 className="font-display text-xl font-bold text-white mb-2">{t.home.newsletter}</h2>
         <p className="text-white/70 mb-6">{t.home.newsletterSub}</p>
 
         {submitted ? (

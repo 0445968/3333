@@ -60,7 +60,7 @@
 
   /* Header */
   .site-header {
-    @apply sticky top-0 z-40 border-b border-surface-border bg-white shadow-sm;
+    @apply sticky top-0 z-50 border-b border-surface-border bg-white shadow-sm;
   }
 
   /* Nav */
@@ -80,7 +80,7 @@
 
   /* Cards */
   .modern-card {
-    @apply overflow-hidden rounded-3xl border border-surface-border bg-white shadow-card;
+    @apply overflow-hidden rounded-xl border border-surface-border bg-white shadow-card;
   }
 
   .modern-card-hover {
@@ -89,7 +89,7 @@
 
   /* Panels */
   .modern-panel-blue {
-    @apply rounded-3xl bg-blue-panel text-white shadow-panel;
+    @apply rounded-xl bg-blue-panel text-white shadow-panel;
   }
 
   .modern-panel-blue p,
@@ -98,7 +98,7 @@
   }
 
   .modern-panel-dark {
-    @apply rounded-3xl bg-ink-900 text-white shadow-panel;
+    @apply rounded-xl bg-ink-900 text-white shadow-panel;
   }
 
   .modern-panel-dark p,
@@ -107,7 +107,7 @@
   }
 
   .modern-panel-sky {
-    @apply rounded-3xl bg-sky-panel text-ink-900 shadow-card;
+    @apply rounded-xl bg-sky-panel text-ink-900 shadow-card;
   }
 
   .modern-panel-sky p,
@@ -116,7 +116,7 @@
   }
 
   .modern-panel-green {
-    @apply rounded-3xl bg-green-panel text-white shadow-card;
+    @apply rounded-xl bg-green-panel text-white shadow-card;
   }
 
   .modern-panel-green p,
@@ -125,7 +125,7 @@
   }
 
   .modern-panel-sun {
-    @apply rounded-3xl bg-sun-panel text-ink-900 shadow-card;
+    @apply rounded-xl bg-sun-panel text-ink-900 shadow-card;
   }
 
   .modern-panel-sun p,
@@ -134,7 +134,7 @@
   }
 
   .modern-panel-red {
-    @apply rounded-3xl bg-breaking-panel text-white shadow-card;
+    @apply rounded-xl bg-breaking-panel text-white shadow-card;
   }
 
   .modern-panel-red p,
@@ -143,7 +143,7 @@
   }
 
   .modern-panel-subtle {
-    @apply rounded-3xl border border-surface-border bg-surface-subtle text-ink-800;
+    @apply rounded-xl border border-surface-border bg-surface-subtle text-ink-800;
   }
 
   /* Buttons */

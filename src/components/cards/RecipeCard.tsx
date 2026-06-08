@@ -15,7 +15,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
 
   return (
     <Link to="/recipes" className="group modern-card-hover block">
-      <div className="relative bg-gradient-to-br from-palm-700 to-travel-800 aspect-[4/3] flex items-end p-3 rounded-t-3xl overflow-hidden">
+      <div className="relative bg-gradient-to-br from-palm-700 to-travel-800 aspect-[4/3] flex items-end p-3 rounded-t-xl overflow-hidden">
         <span className="text-white/40 text-xs uppercase tracking-wider">Recipe Image</span>
         <span className={`absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full ${DIFFICULTY_COLORS[recipe.difficulty]}`}>
           {recipe.difficulty}

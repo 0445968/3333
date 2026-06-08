@@ -17,7 +17,7 @@ export function ReleaseCard({ release }: { release: MusicRelease }) {
 
   return (
     <div className="modern-card-hover">
-      <div className="bg-gradient-to-br from-travel-700 to-travel-900 aspect-square flex items-center justify-center relative rounded-t-3xl overflow-hidden">
+      <div className="bg-gradient-to-br from-travel-700 to-travel-900 aspect-square flex items-center justify-center relative rounded-t-xl overflow-hidden">
         <div className="text-white/15 text-5xl font-display font-black">{release.title.charAt(0)}</div>
         <span className={`absolute top-3 right-3 text-xs font-bold px-2 py-0.5 rounded-full ${TYPE_COLORS[release.type] ?? 'bg-ink-100 text-ink-700'}`}>
           {release.type}

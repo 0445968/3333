@@ -50,7 +50,7 @@ export function AdvertisingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {AD_OPTIONS.map((opt) => (
               <div key={opt.title} className="modern-card-hover p-5">
-                <span className="text-3xl mb-3 block">{opt.icon}</span>
+                <span className="text-xl mb-3 block">{opt.icon}</span>
                 <h3 className="font-display font-bold text-ink-900">{opt.title}</h3>
                 <p className="text-ink-600 text-sm mt-2">{opt.description}</p>
                 <p className="text-travel-700 font-medium text-sm mt-3">{opt.price}</p>
@@ -60,7 +60,7 @@ export function AdvertisingPage() {
         </div>
 
         {/* Contact form */}
-        <div className="bg-surface-subtle rounded-3xl p-6 max-w-2xl mx-auto border border-surface-border">
+        <div className="bg-surface-subtle rounded-xl p-6 max-w-2xl mx-auto border border-surface-border">
           <h2 className="font-display text-2xl font-bold text-ink-900 mb-5">Get in Touch</h2>
           <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

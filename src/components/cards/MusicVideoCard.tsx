@@ -8,7 +8,7 @@ export function MusicVideoCard({ video }: { video: MusicVideo }) {
 
   return (
     <div className="group modern-card-hover">
-      <div className={`relative bg-gradient-to-br ${gradient} aspect-video flex items-center justify-center rounded-t-3xl overflow-hidden`}>
+      <div className={`relative bg-gradient-to-br ${gradient} aspect-video flex items-center justify-center rounded-t-xl overflow-hidden`}>
         <PlayCircle size={40} className="text-white/60 group-hover:text-white group-hover:scale-110 transition-all" />
         <div className="absolute bottom-2 right-2 bg-ink-900/80 text-white text-xs px-1.5 py-0.5 rounded-lg flex items-center gap-1">
           <Clock size={10} /> {video.duration}

@@ -31,7 +31,7 @@ export function RecipesPage() {
       <div className="content-shell py-8">
         {/* Featured */}
         {featured && (
-          <div className="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-surface-subtle rounded-3xl p-6 border border-surface-border">
+          <div className="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-surface-subtle rounded-xl p-6 border border-surface-border">
             <div className="bg-gradient-to-br from-travel-700 to-travel-900 rounded-2xl aspect-[4/3] flex items-end p-4">
               <span className="text-white/50 text-xs uppercase tracking-wider">Featured Recipe</span>
             </div>

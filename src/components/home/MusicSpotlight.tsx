@@ -25,7 +25,7 @@ export function MusicSpotlight() {
               <Music size={15} className="text-sun-300" />
               <span className="text-sun-300 text-xs font-bold uppercase tracking-widest">Island Music</span>
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white">{t.home.musicFromArchipelago}</h2>
+            <h2 className="font-display text-2xl md:text-xl font-bold text-white">{t.home.musicFromArchipelago}</h2>
             <p className="text-white/50 text-sm mt-0.5">{t.home.musicSub}</p>
           </div>
           <Link to="/music">
