@@ -6,147 +6,90 @@ export default {
     extend: {
       colors: {
         ink: {
-          50: '#f7fbff',
-          100: '#edf5fb',
-          200: '#d6e7f4',
-          300: '#b8d3e9',
-          400: '#8eb8d8',
-          500: '#659cc6',
-          600: '#477da7',
-          700: '#356386',
-          800: '#294f6b',
-          900: '#16324f',
-          950: '#0b1f33',
+          50: '#F8FAFC',
+          100: '#F1F5F9',
+          200: '#E2E8F0',
+          300: '#CBD5E1',
+          400: '#94A3B8',
+          500: '#64748B',
+          600: '#475569',
+          700: '#334155',
+          800: '#1E293B',
+          900: '#0B1220',
+          950: '#050A14',
         },
 
-        ocean: {
-          50: '#eaffff',
-          100: '#c9fbfb',
-          200: '#9af4f5',
-          300: '#5de8eb',
-          400: '#23d3dc',
-          500: '#08b8c7',
-          600: '#0794a5',
-          700: '#0b7585',
-          800: '#105f6c',
-          900: '#134f5a',
+        travel: {
+          50: '#EAF5FF',
+          100: '#D3EAFE',
+          200: '#A8D6FD',
+          300: '#72BDF9',
+          400: '#399FF2',
+          500: '#0F7CD8',
+          600: '#005FAE',
+          700: '#004B8D',
+          800: '#003B73',
+          900: '#082F5F',
         },
 
-        sky: {
-          50: '#eefaff',
-          100: '#d7f3ff',
-          200: '#b9eaff',
-          300: '#86dcff',
-          400: '#4ac8ff',
-          500: '#1cadf2',
-          600: '#078bd0',
-          700: '#096fab',
-          800: '#0d5d8d',
-          900: '#124d74',
+        sun: {
+          50: '#FFF8E1',
+          100: '#FFEFB3',
+          200: '#FFE180',
+          300: '#FFD166',
+          400: '#FBBF24',
+          500: '#D97706',
+          600: '#B45309',
+          700: '#92400E',
+          800: '#78350F',
+          900: '#451A03',
         },
 
-        mango: {
-          50: '#fff9e8',
-          100: '#fff0bd',
-          200: '#ffe287',
-          300: '#ffd04a',
-          400: '#ffbd1f',
-          500: '#f89f09',
-          600: '#db7604',
-          700: '#b65207',
-          800: '#93400d',
-          900: '#78360f',
+        aqua: {
+          50: '#ECFEFF',
+          100: '#CFFAFE',
+          200: '#A5F3FC',
+          300: '#67E8F9',
+          400: '#2DD4BF',
+          500: '#0891B2',
+          600: '#00758F',
+          700: '#005A70',
+          800: '#004E64',
+          900: '#083344',
+        },
+
+        emerald: {
+          50: '#ECFDF5',
+          100: '#D1FAE5',
+          200: '#A7F3D0',
+          300: '#6EE7B7',
+          400: '#34D399',
+          500: '#059669',
+          600: '#047857',
+          700: '#065F46',
+          800: '#064E3B',
+          900: '#022C22',
         },
 
         coral: {
-          50: '#fff1ed',
-          100: '#ffe0d7',
-          200: '#ffc6b6',
-          300: '#ff9f87',
-          400: '#ff7554',
-          500: '#ff5533',
-          600: '#ea3517',
-          700: '#c6260f',
-          800: '#a32311',
-          900: '#872316',
+          50: '#FFF1F2',
+          100: '#FFE4E6',
+          200: '#FECDD3',
+          300: '#FDA4AF',
+          400: '#FB7185',
+          500: '#E11D48',
+          600: '#BE123C',
+          700: '#991B1B',
+          800: '#7F1D1D',
+          900: '#450A0A',
         },
 
-        hibiscus: {
-          50: '#fff0f7',
-          100: '#ffe3f0',
-          200: '#ffc8e1',
-          300: '#ff9dca',
-          400: '#ff61a7',
-          500: '#f73689',
-          600: '#df1767',
-          700: '#bd0f51',
-          800: '#9c1045',
-          900: '#82123d',
-        },
-
-        palm: {
-          50: '#effff4',
-          100: '#d9ffe6',
-          200: '#b6ffce',
-          300: '#7dffaa',
-          400: '#3cef7f',
-          500: '#15d45f',
-          600: '#0bae48',
-          700: '#0d883b',
-          800: '#106b34',
-          900: '#10582d',
-        },
-
-        sand: {
-          50: '#fffaf0',
-          100: '#fff2cf',
-          200: '#ffe49f',
-          300: '#ffd36a',
-          400: '#ffc13a',
-          500: '#f7a915',
-          600: '#d88408',
-          700: '#b3610b',
-          800: '#914b10',
-          900: '#783f12',
-        },
-
-        cream: {
-          50: '#fffdf7',
-          100: '#fff7df',
-          200: '#ffedb2',
-          300: '#ffdf7b',
-          400: '#ffd14d',
-          500: '#ffc229',
-          600: '#e9a70f',
-          700: '#bf7d0c',
-          800: '#995f11',
-          900: '#7d4e12',
-        },
-
-        turquoise: {
-          50: '#eaffff',
-          100: '#c9fbfb',
-          200: '#9af4f5',
-          300: '#5de8eb',
-          400: '#23d3dc',
-          500: '#08b8c7',
-          600: '#0794a5',
-          700: '#0b7585',
-          800: '#105f6c',
-          900: '#134f5a',
-        },
-
-        navy: {
-          50: '#eef7ff',
-          100: '#d8edff',
-          200: '#b9ddff',
-          300: '#89c8ff',
-          400: '#52a7ff',
-          500: '#2b84f6',
-          600: '#1564d8',
-          700: '#144faf',
-          800: '#164688',
-          900: '#16324f',
+        surface: {
+          page: '#F6F8FB',
+          card: '#FFFFFF',
+          raised: '#FFFFFF',
+          subtle: '#EEF4FA',
+          border: '#D7E2EE',
         },
       },
 
@@ -156,27 +99,26 @@ export default {
       },
 
       boxShadow: {
-        sunny: '0 20px 60px rgba(8, 184, 199, 0.18)',
-        card: '0 18px 45px rgba(22, 50, 79, 0.10)',
-        lift: '0 26px 70px rgba(22, 50, 79, 0.16)',
-        glow: '0 0 0 1px rgba(255, 193, 58, 0.35), 0 24px 70px rgba(8, 184, 199, 0.22)',
+        card: '0 10px 30px rgba(11, 18, 32, 0.08)',
+        lift: '0 20px 55px rgba(11, 18, 32, 0.14)',
+        panel: '0 24px 80px rgba(11, 18, 32, 0.12)',
       },
 
       backgroundImage: {
-        'island-bright':
-          'linear-gradient(135deg, #08b8c7 0%, #1cadf2 48%, #ffc229 100%)',
+        'page-modern':
+          'linear-gradient(180deg, #F6F8FB 0%, #FFFFFF 42%, #F6F8FB 100%)',
 
-        'hero-sunrise':
-          'radial-gradient(circle at 15% 15%, rgba(255, 193, 58, 0.55), transparent 28%), radial-gradient(circle at 85% 10%, rgba(255, 85, 51, 0.28), transparent 26%), linear-gradient(135deg, #eaffff 0%, #d7f3ff 42%, #fff7df 100%)',
+        'hero-modern':
+          'radial-gradient(circle at 16% 18%, rgba(45, 212, 191, 0.18), transparent 30%), radial-gradient(circle at 84% 12%, rgba(255, 209, 102, 0.28), transparent 28%), linear-gradient(180deg, #FFFFFF 0%, #EAF5FF 100%)',
 
-        'ocean-pop':
-          'linear-gradient(135deg, #23d3dc 0%, #1cadf2 55%, #5de8eb 100%)',
+        'blue-panel':
+          'linear-gradient(135deg, #003B73 0%, #004B8D 58%, #005A70 100%)',
 
-        'mango-coral':
-          'linear-gradient(135deg, #ffc229 0%, #ff7554 100%)',
+        'breaking-panel':
+          'linear-gradient(135deg, #991B1B 0%, #7F1D1D 100%)',
 
-        'page-bright':
-          'radial-gradient(circle at top left, rgba(93, 232, 235, 0.38), transparent 30%), radial-gradient(circle at top right, rgba(255, 193, 58, 0.32), transparent 28%), linear-gradient(180deg, #fffdf7 0%, #eefaff 100%)',
+        'sun-panel':
+          'linear-gradient(135deg, #FFD166 0%, #FFE180 100%)',
       },
 
       borderRadius: {
