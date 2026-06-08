@@ -1,0 +1,153 @@
+import type { Business } from '../types';
+
+// TODO: Add business profile claim system and user-submitted business listings
+
+export const businesses: Business[] = [
+  {
+    id: '1',
+    name: 'Blue Crab Restaurant',
+    slug: 'blue-crab-restaurant',
+    category: 'Restaurants',
+    island: 'San Andrés',
+    location: 'North End, San Andrés',
+    description: 'Family-owned seafood restaurant serving traditional Raizal recipes since 1987. Known for their coconut fish stew, crab & coconut rice, and fresh catch of the day.',
+    phone: '+57 8 512 0000',
+    email: 'hello@bluecrab.example',
+    featured: true,
+    rating: 4.8,
+    services: ['Dine-in', 'Takeaway', 'Catering', 'Private events'],
+    hours: 'Mon–Sat 11:00–22:00, Sun 12:00–20:00',
+    ownerStory: 'Founded by Miss Maybelle Johnson after her mother\'s recipes became the talk of the neighborhood. Now run by her daughter and grandchildren, Blue Crab remains a community anchor.',
+  },
+  {
+    id: '2',
+    name: 'Old Providence Lodge',
+    slug: 'old-providence-lodge',
+    category: 'Hotels & Guesthouses',
+    island: 'Providencia',
+    location: 'Southwest Bay, Providencia',
+    description: 'A peaceful family-run guesthouse steps from the beach. Ten comfortable rooms, a communal kitchen, and a garden where guests can pick fresh fruit for breakfast.',
+    phone: '+57 8 514 0000',
+    featured: true,
+    rating: 4.7,
+    hours: 'Reception: 7:00–21:00 daily',
+    ownerStory: 'Started as the family home of the Howard family, converted into a guesthouse to share the beauty of Providencia with visitors while supporting local employment.',
+  },
+  {
+    id: '3',
+    name: 'Coral Reef Tours',
+    slug: 'coral-reef-tours',
+    category: 'Tour Guides',
+    island: 'San Andrés',
+    location: 'San Andrés Town Center',
+    description: 'Certified Raizal dive guides offering responsible reef tours, snorkeling expeditions, and educational dives in the Seaflower Biosphere Reserve.',
+    phone: '+57 8 512 1111',
+    email: 'dive@coralreeftours.example',
+    website: 'https://coralreeftours.example',
+    featured: true,
+    rating: 4.9,
+    services: ['Snorkeling tours', 'Scuba diving', 'Night dives', 'Photography dives', 'Group packages'],
+    hours: 'Daily 7:00–17:00',
+  },
+  {
+    id: '4',
+    name: 'Island Wheels Transport',
+    slug: 'island-wheels-transport',
+    category: 'Transportation',
+    island: 'San Andrés',
+    location: 'Airport Road, San Andrés',
+    description: 'Reliable island transport service offering airport pickups, golf cart rentals, and guided island circuits by local drivers who know every corner.',
+    phone: '+57 8 512 2222',
+    featured: false,
+    rating: 4.5,
+    hours: 'Daily 6:00–22:00',
+  },
+  {
+    id: '5',
+    name: 'Archipelago Artisan Market',
+    slug: 'archipelago-artisan-market',
+    category: 'Shops',
+    island: 'San Andrés',
+    location: 'Central Market, San Andrés',
+    description: 'A collective of Raizal artisans selling handwoven baskets, carved wood, traditional jewelry, and locally made condiments and preserves.',
+    featured: false,
+    rating: 4.6,
+    hours: 'Tue–Sun 8:00–18:00',
+  },
+  {
+    id: '6',
+    name: 'Green Island Farm',
+    slug: 'green-island-farm',
+    category: 'Agriculture',
+    island: 'Providencia',
+    location: 'Mountain, Providencia',
+    description: 'A small family farm growing plantains, cassava, breadfruit, and tropical vegetables using sustainable methods. Supplies local restaurants and the weekly farmers market.',
+    phone: '+57 8 514 3333',
+    featured: false,
+    rating: 4.7,
+    hours: 'Market days: Wed & Sat 6:00–12:00',
+  },
+  {
+    id: '7',
+    name: 'Caribbean Catch Fishing Co.',
+    slug: 'caribbean-catch-fishing',
+    category: 'Fishing',
+    island: 'San Andrés',
+    location: 'South Dock, San Andrés',
+    description: 'A traditional fishing cooperative supplying fresh fish, lobster, and sea snails to local homes and restaurants. Also offers sport fishing trips for visitors.',
+    featured: false,
+    rating: 4.8,
+    hours: 'Weekdays 5:00–12:00',
+  },
+  {
+    id: '8',
+    name: 'Island Legal Services',
+    slug: 'island-legal-services',
+    category: 'Professional Services',
+    island: 'San Andrés',
+    location: 'Business District, San Andrés',
+    description: 'A local law firm specializing in property rights, family law, and issues unique to the archipelago including territorial and indigenous rights law.',
+    phone: '+57 8 512 4444',
+    featured: false,
+    rating: 4.5,
+    hours: 'Mon–Fri 8:00–17:00',
+  },
+  {
+    id: '9',
+    name: 'Sea & Sand Wellness',
+    slug: 'sea-sand-wellness',
+    category: 'Health & Wellness',
+    island: 'San Andrés',
+    location: 'Spratt Bight, San Andrés',
+    description: 'A holistic wellness center offering massage therapy, herbal treatments, and island-inspired relaxation experiences using local plant medicine traditions.',
+    phone: '+57 8 512 5555',
+    featured: true,
+    rating: 4.9,
+    hours: 'Mon–Sat 9:00–20:00',
+  },
+  {
+    id: '10',
+    name: 'Providence Build & Repair',
+    slug: 'providence-build-repair',
+    category: 'Construction',
+    island: 'Providencia',
+    location: 'Free Town, Providencia',
+    description: 'A locally owned construction company with decades of experience building and restoring island homes using local materials and hurricane-resilient techniques.',
+    featured: false,
+    rating: 4.6,
+    hours: 'Mon–Fri 7:00–17:00',
+  },
+];
+
+export function getBusinessBySlug(slug: string): Business | undefined {
+  return businesses.find((b) => b.slug === slug);
+}
+
+export function getBusinessesByCategory(category: string): Business[] {
+  if (category === 'All') return businesses;
+  return businesses.filter((b) => b.category === category);
+}
+
+export function getFeaturedBusinesses(): Business[] {
+  return businesses.filter((b) => b.featured);
+}
